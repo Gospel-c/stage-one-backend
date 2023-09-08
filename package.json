@@ -1,0 +1,24 @@
+{
+  "name": "stage-one-backend",
+  "version": "1.0.0",
+  "description": "HNG Internship Program for Backend Stage one",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gospel-c/stage-one-backend.git"
+  },
+  "author": "Gospel Amanze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gospel-c/stage-one-backend/issues"
+  },
+  "homepage": "https://github.com/Gospel-c/stage-one-backend#readme",
+  "dependencies": {
+    "express": "^4.18.2",
+    "moment-timezone": "^0.5.43",
+    "mongoose": "^7.5.0"
+  }
+}

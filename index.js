@@ -12,7 +12,7 @@ app.get("/api", (req, res) => {
     const utc_time = currentUtcTime.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
     const github_repo_url = "https://github.com/Gospel-c/stage-one-backend.git";
-    const github_file_url = `${git_repo_url}/blob/main/index.js`;
+    const github_file_url = `${github_repo_url}/blob/main/index.js`;
 
     const response = {
         slack_name,

@@ -11,7 +11,7 @@ app.get("/api", (req, res) => {
     const currentUtcTime = moment().tz('UTC');
     const utc_time = currentUtcTime.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
-    const git_repo_url = "https://github.com/Gospel-c/stage-one-backend.git";
+    const github_repo_url = "https://github.com/Gospel-c/stage-one-backend.git";
     const github_file_url = `${git_repo_url}/blob/main/index.js`;
 
     const response = {
@@ -20,7 +20,7 @@ app.get("/api", (req, res) => {
         utc_time: utc_time,
         track,
         github_file_url,
-        git_repo_url,
+        github_repo_url,
         status_code: 200,
     }
 

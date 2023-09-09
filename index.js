@@ -5,23 +5,23 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 app.get("/api", (req, res) => {
-    const { slackName, track } = req.query;
+    const { slack_name, track } = req.query;
 
-    const currentDay = moment().tz('UTC').format('dddd');
+    const current_day = moment().tz('UTC').format('dddd');
     const currentUtcTime = moment().tz('UTC');
-    const utcTimeStr = currentUtcTime.format('YYYY-MM-DDTHH:mm:ss[Z]');
+    const utc_time = currentUtcTime.format('YYYY-MM-DDTHH:mm:ss[Z]');
 
-    const gitRepoUrl = "https://github.com/Gospel-c/stage-one-backend.git";
-    const githubFileUrl = `${gitRepoUrl}/blob/main/index.js`;
+    const git_repo_url = "https://github.com/Gospel-c/stage-one-backend.git";
+    const github_file_url = `${git_repo_url}/blob/main/index.js`;
 
     const response = {
-        slackName,
-        currentDay,
-        utcTime: utcTimeStr,
+        slack_name,
+        current_day,
+        utc_time: utc_time,
         track,
-        gitRepoUrl,
-        githubFileUrl,
-        statusCode: 200,
+        github_file_url,
+        git_repo_url,
+        status_code: 200,
     }
 
     res.json(response);

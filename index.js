@@ -2,6 +2,7 @@ const express = require('express');
 const moment = require('moment-timezone');
 
 const app = express();
+const PORT = process.env.PORT || 3001;
 
 app.get("/api", (req, res) => {
     const { slackName, track } = req.query;
@@ -26,7 +27,7 @@ app.get("/api", (req, res) => {
     res.json(response);
 });
 
-app.listen('3000', function() {
+app.listen(PORT, function() {
     console.log('Application has started at port 3000');
 }); 
 
